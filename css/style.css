@@ -24,6 +24,33 @@
     transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Animasi durasi 0.3 detik */
 }
 
+/* Animasi untuk offcanvas saat dibuka */
+.offcanvas.show {
+    transition: transform 0.3s ease-in-out; /* Animasi durasi 0.3 detik dengan percepatan-melambat (ease-in-out) */
+    transform: translateX(0); /* Offcanvas slide ke sisi kanan */
+}
+
+/* Animasi untuk offcanvas saat ditutup */
+.offcanvas {
+    transition: transform 0.3s ease-in-out; /* Animasi durasi 0.3 detik dengan percepatan-melambat (ease-in-out) */
+    transform: translateX(100%); /* Offcanvas slide keluar ke sisi kanan */
+}
+
+/* Animasi untuk menutup offcanvas saat tombol "close" diklik */
+.offcanvas.closing {
+    transform: translateX(100%); /* Pindahkan offcanvas ke kanan (diluar layar) */
+}
+
+/* Animasi untuk tombol "close" */
+.offcanvas-header .btn-close {
+    transition: transform 0.3s ease-in-out; /* Animasi durasi 0.3 detik dengan efek ease-in-out */
+}
+
+/* Ketika tombol "close" diklik, beri efek transisi */
+.offcanvas.show .offcanvas-header .btn-close {
+    transform: rotate(180deg); /* Rotasi ikon "close" sebesar 180 derajat */
+}
+
 @media (min-width: 768px) {
     .navbar-expand-md .navbar-nav .nav-link {
         background: #000;

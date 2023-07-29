@@ -1,0 +1,301 @@
+/* * {
+    border: 2px solid #ff0000;
+} */
+* {
+    font-family: Poppins;
+}
+
+/* NAVBAR START */
+.navbar-nav .nav-link {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: black;
+    border-radius: 216px;
+}
+
+.navbar .navbar-nav .nav-link.smooth-hover:hover {
+    background-color: #d9d9d9; /* Warna latar belakang ketika hover */
+    color: #000000; /* Warna teks ketika hover */
+    transform: translateY(-2px); /* Agar naik sedikit saat di-hover */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Animasi durasi 0.3 detik */
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        background: #000;
+        width: 100px;
+    }
+}
+/* NAVBAR END */
+
+/* HERO START*/
+#logo {
+    padding-bottom: 100px;
+    animation: pulseAnimation 3s infinite;
+}
+
+.lead {
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#jumbotron {
+    height: auto;
+}
+
+#hero {
+    padding-top: 168px;
+    padding-bottom: 168px;
+}
+
+.jumbotron {
+    text-align: center;
+    width: 100%;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+}
+
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Skala maksimum saat mengembang */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* HERO END */
+
+/* ABOUT START*/
+#about-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#about img {
+    margin-bottom: 30px;
+}
+#about p {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 993px;
+    margin: auto;
+}
+/* ABOUT END */
+
+/* BEST DEALS START */
+#deals {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#deals h2 {
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    background: #000;
+    max-width: 360px;
+    height: 64px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+
+/* CSS untuk membuat tampilan card pada konten Swiper */
+.swiper-container {
+    overflow-x: hidden;
+}
+
+.swiper-slide {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CSS untuk membuat gambar konten fit */
+.swiper-slide img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* CSS untuk mengatur tampilan judul dan deskripsi pada card */
+.swiper-slide h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.swiper-slide p {
+    font-size: 16px;
+    text-align: center;
+}
+/* BEST DEALS END */
+
+/* PRODUCTS START */
+#products {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tata letak dengan 3 kolom saat tampilan web */
+    gap: 70px; /* Jarak antara card */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border: none;
+}
+
+.card:hover {
+    transform: scale(1.1); /* Ubah nilai skala sesuai preferensi */
+    transition: 0.5s ease;
+}
+
+/* Mengatur tampilan grid untuk layar seluler */
+@media (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Tata letak dengan 1 kolom saat tampilan perangkat seluler */
+    }
+}
+
+/* PRODUCTS END */
+
+/* SIZE START START*/
+#size {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.image-container {
+    flex: 0 0 auto; /* Agar div ini tetap berukuran sesuai isi (gambar) */
+    margin-right: 10px; /* Jarak antara gambar dan garis horizontal */
+}
+
+.divider {
+    flex: 1; /* Agar garis horizontal mengambil sisa ruang yang tersedia */
+    max-height: 5px;
+    background-color: #000;
+    margin-top: 20px;
+}
+
+.flex-sm-wrap {
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.flex-sm-wrap img {
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    /* Saat tampilan HP, div akan ditampilkan dalam 1 kolom */
+    #baju {
+        flex-direction: column;
+    }
+}
+/* SIZE START END */
+
+/* FOOTER START */
+#footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#footer button {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    background: none;
+    width: 400px;
+    height: 80px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0);
+    margin-bottom: 50px;
+}
+
+#footer button:hover {
+    background-color: #d9d9d9;
+    color: #000;
+    transition: 0.5s;
+    transform: translateY(-5px);
+}
+
+#footer h3 {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+
+#icon-sosmed {
+    margin-bottom: 20px;
+}
+
+footer {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+    /* Saat tampilan HP, div akan ditampilkan dalam 1 kolom */
+    #footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footer button {
+        width: 315px;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+/* FOOTER END */
